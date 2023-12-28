@@ -118,16 +118,14 @@ export function doInit() {
 
       if (token) {
         // Decode the token to get expiration time
-        const decodedToken = Jwt.decode(token);
-        console.log(decodedToken, "decodedToken");
-
+        // const decodedToken = Jwt.decode(token);
+        // console.log(decodedToken, "decodedToken");
         // Check if the token is expired
-        if (decodedToken && decodedToken.exp * 1000 < Date.now()) {
-          // Token has expired, log the user out
-          dispatch(logoutUser());
-          return;
-        }
-
+        // if (decodedToken && decodedToken.exp * 1000 < Date.now()) {
+        //   // Token has expired, log the user out
+        //   dispatch(logoutUser());
+        //   return;
+        // }
         // Token is still valid, fetch user details
         // currentUser = await findMe();
       }

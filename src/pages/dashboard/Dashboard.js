@@ -49,8 +49,8 @@ const Dashboard = () => {
               </span>{" "}
               &nbsp; {stateName} State
             </p>
-            {Object.values(currentQuestion).map((indicator) => (
-              <div className="row progress-stats">
+            {Object.values(currentQuestion).map((indicator, index) => (
+              <div key={index} className="row progress-stats">
                 <div className="col-md-9 col-12">
                   <p className="description deemphasize mb-xs text-white">
                     {indicator.question}
